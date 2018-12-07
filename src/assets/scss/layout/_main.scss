@@ -32,6 +32,10 @@
 			border-radius: _size(border-radius);
 			opacity: 0;
 
+			&.portfolio {
+				width: 50rem;
+			}
+
 			&.timeout {
 				display: none;
 			}

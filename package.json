@@ -1,32 +1,47 @@
 {
-  "name": "gatsby-starter-dimension",
-  "description": "Gatsby Starter - Dimension by HTML5 UP",
-  "version": "1.0.0",
-  "author": "Hunter Chang",
+  "name": "devvault-site",
+  "description": "DevVault Site",
+  "version": "0.0.1",
+  "author": "Max Vorobyev",
   "dependencies": {
+    "disqus-react": "^1.0.4",
     "gatsby": "^1.9.118",
     "gatsby-image": "^1.0.27",
     "gatsby-link": "^1.6.28",
+    "gatsby-plugin-canonical-urls": "^1.0.14",
     "gatsby-plugin-google-analytics": "^1.0.12",
+    "gatsby-plugin-manifest": "^1.0.15",
+    "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.14",
     "gatsby-plugin-sharp": "^1.6.21",
+    "gatsby-plugin-sitemap": "^1.2.14",
+    "gatsby-plugin-yandex-metrika": "^1.0.5",
     "gatsby-remark-copy-linked-files": "^1.5.9",
     "gatsby-remark-images": "^1.5.33",
     "gatsby-source-filesystem": "^1.5.8",
     "gatsby-transformer-remark": "^1.7.21",
     "gatsby-transformer-sharp": "^1.6.14",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-disqus-comments": "^1.1.1",
+    "react-helmet": "^5.2.0",
+    "styled-jsx": "^2.2.5"
   },
-  "homepage": "https://github.com/ChangoMan/gatsby-starter-dimension",
+  "homepage": "https://www.devvault.ru/projects",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "dimension",
+    "devvault",
+    "site",
+    "react",
+    "components"
   ],
   "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChangoMan/gatsby-starter-dimension.git"
+    "url": "https://gitlab.com/GTVolk/DevVaultSite.git"
   },
   "scripts": {
     "dev": "gatsby develop",
@@ -36,5 +51,18 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+  },
+  "devDependencies": {
+    "ajv": "^6.2.0",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "gatsby-plugin-styled-jsx": "^2.0.4",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.2.0"
   }
 }

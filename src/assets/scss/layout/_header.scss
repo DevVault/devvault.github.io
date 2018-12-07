@@ -32,7 +32,7 @@
 				display: block;
 				position: absolute;
 				top: calc(-3.5rem - 1px);
-				left: calc(50% - #{_size(border-width) * 1});
+				left: calc(50% + #{_size(border-width) * (-1)});
 				width: _size(border-width);
 				height: calc(3.5rem + 1px);
 				background: _palette(border);
@@ -84,11 +84,17 @@
 				}
 			}
 
+			h1 {
+				font-style: italic;
+				font-size: 5.0rem;
+			}
+
 			p {
 				text-transform: uppercase;
 				letter-spacing: _font(letter-spacing);
 				font-size: 0.8rem;
 				line-height: 2;
+				font-weight: bold;
 			}
 		}
 
@@ -119,6 +125,7 @@
 						letter-spacing: _font(letter-spacing);
 						font-size: 0.8rem;
 						border-bottom: 0;
+						font-weight: bold;
 
 						&:hover {
 							background-color: _palette(border-bg);
