@@ -29,7 +29,7 @@
     "react-helmet": "^5.2.0",
     "styled-jsx": "^2.2.5"
   },
-  "homepage": "https://www.devvault.ru/projects",
+  "homepage": "https://www.devvault.ru/",
   "keywords": [
     "gatsby",
     "dimension",
@@ -41,7 +41,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/GTVolk/DevVaultSite.git"
+    "url": "https://github.com/GTVolk/DevVaultSite.git"
   },
   "scripts": {
     "dev": "gatsby develop",
