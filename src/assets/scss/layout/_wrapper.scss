@@ -6,35 +6,36 @@
 
 /* Wrapper */
 
-	#wrapper {
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('align-items', 'center');
-		@include vendor('justify-content', 'space-between');
-		position: relative;
-		min-height: 100vh;
-		width: 100%;
-		padding: 4rem 2rem;
-		z-index: 3;
+#wrapper {
+  @include vendor('display', 'flex');
+  @include vendor('flex-direction', 'column');
+  @include vendor('align-items', 'center');
+  @include vendor('justify-content', 'space-between');
 
-		&:before {
-			content: '';
-			display: block;
-		}
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 2rem;
+  z-index: 3;
 
-		@include breakpoint(xlarge) {
-			padding: 3rem 2rem;
-		}
+  &::before {
+    content: '';
+    display: block;
+  }
 
-		@include breakpoint(small) {
-			padding: 2rem 1rem;
-		}
+  @include breakpoint(xlarge) {
+    padding: 3rem 2rem;
+  }
 
-		@include breakpoint(xsmall) {
-			padding: 1rem;
-		}
+  @include breakpoint(small) {
+    padding: 2rem 1rem;
+  }
 
-		&.page {
-			@include vendor('justify-content', 'flex-start');
-		}
-	}
+  @include breakpoint(xsmall) {
+    padding: 1rem;
+  }
+
+  &.page {
+    @include vendor('justify-content', 'flex-start');
+  }
+}

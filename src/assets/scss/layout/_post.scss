@@ -1,0 +1,34 @@
+
+.post {
+  display: table;
+  margin-bottom: 1em;
+}
+
+.post .pcontainer {
+  display: table-cell;
+  height: 192px;
+  float: left;
+}
+
+.post .pcontainer .preview {
+  min-width: 192px;
+  margin-right: 1em;
+}
+
+.post .info {
+  display: block;
+}
+
+.post .info .title {
+  width: 100%;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2em;
+}
+
+.post .info .description {
+  padding: 0.1em;
+
+  span {
+    font-size: 0.9em;
+  }
+}
