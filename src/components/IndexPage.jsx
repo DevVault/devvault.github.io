@@ -17,7 +17,7 @@ class IndexPage extends React.Component {
         </div>
         <div className="content">
           <div className="inner">
-            <h1>DevVault</h1>
+            <h1><b>DevVault</b></h1>
             <p>IT Tech, News, Games and all fun stuff here.</p>
           </div>
         </div>

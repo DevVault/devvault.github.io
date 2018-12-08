@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 class Article extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <div id="main" style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}>
-        <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{ display: 'none' }}>
+        <article id={this.props.article} className={`active ${this.props.articleTimeout ? 'timeout' : ''}`} style={{ display: 'none' }}>
           <h2 className="major">{this.props.articleName}</h2>
-          {this.props.children()}
-          <div className="close" onClick={() => { this.props.onCloseArticle(); }} />
+          {this.props.children}
+          <div className="close" onClick={() => { window.history.back(); }} />
         </article>
       </div>
     );

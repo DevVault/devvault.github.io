@@ -104,13 +104,3 @@ Template.propTypes = {
 
 export default Template;
 
-export const pageQuery = graphql`
-  query PageQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;

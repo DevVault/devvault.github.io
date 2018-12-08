@@ -16,6 +16,7 @@ class PostsPage extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
       .map(edge => <PostBox key={edge.node.id} post={edge.node} />);
 
+    console.log(this.props);
     return (
       <Article
         article={this.props.article}
