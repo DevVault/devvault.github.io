@@ -1,0 +1,133 @@
+#about {}
+
+.section {
+  display: table;
+  position: relative;
+  width: 100%;
+
+  h1 {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+  }
+
+  h2 {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+  }
+
+  h3 {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+  }
+
+  h4 {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+  }
+
+  h5 {
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+  }
+}
+
+.left {
+  display: table-cell;
+  width: 25%;
+
+  h3 {
+    padding-top: 1.5em;
+  }
+}
+
+.right {
+  display: table-cell;
+  width: 75%;
+}
+
+.contact {
+  display: block;
+
+  img#profilepicture {
+    width: 9em;
+    height: 9em;
+    background-image: url('../../images/photo.jpg');
+    background-size: 600px 1080px;
+    background-position: 63% 31%;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  .left {
+    width: 10em;
+    float: left;
+  }
+}
+
+.personal {
+}
+
+.technical {
+  display: table;
+
+  h4 {
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .right_right {
+    display: table-cell;
+    padding-left: 2rem;
+    width: 40%;
+  }
+
+  .right_left {
+    width: 55%;
+    display: table-cell;
+  }
+}
+
+.progress-bar {
+  background-color: #111;
+  height: 0.5rem;
+  width: 12rem;
+  margin-bottom: 1.5rem;
+
+  span {
+    display: block;
+    height: 100%;
+    background-color: #f60;
+    z-index: 3;
+  }
+
+  &.green {
+    span {
+      background-color: green;
+    }
+  }
+
+  &.yellowgreen {
+    span {
+      background-color: yellowgreen;
+    }
+  }
+
+  &.yellow {
+    span {
+      background-color: yellow;
+    }
+  }
+
+  &.orange {
+    span {
+      background-color: orange;
+    }
+  }
+
+  &.red {
+    span {
+      background-color: red;
+    }
+  }
+}

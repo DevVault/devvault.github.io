@@ -1,20 +1,17 @@
-# gatsby-starter-dimension
+# DevVault Site
 
-**This is a starter for Gatsby.js V1.**
+## Origin
+Based on starter for Gatsby.js gatsby-starter-dimension V1
 
-**A newer version of this starter for Gatsby.js V2 can be found at:**
-<br/>
-**https://github.com/codebushi/gatsby-starter-dimension-v2**
+Origin of this starter for Gatsby.js V1 can be found at:
+[Gatsby Dimension starter](https://github.com/codebushi/gatsby-starter-dimension)
 
-Gatsby starter based on the Dimension site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
+## Description
 
-## Preview
+Main [DevVault](https://www.devvault.ru) site repository
 
-http://gatsby-dimension.surge.sh/
 
 ## Installation
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-starter-dimension https://github.com/ChangoMan/gatsby-starter-dimension`
-
+Checkout this repository and cd in project root directory
 Run `gatsby develop` in the terminal to start.
