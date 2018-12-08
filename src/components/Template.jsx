@@ -15,22 +15,30 @@ class Template extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: 'is-loading',
+      loading: 'is-loading'
     };
     this.handleOpenArticle = this.handleOpenArticle.bind(this);
     this.handleCloseArticle = this.handleCloseArticle.bind(this);
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   componentDidMount() {
     this.timeoutId = setTimeout(() => {
       this.setState({ loading: '' });
     }, 100);
+    document.addEventListener('mousedown', this.handleClickOutside);
   }
 
   componentWillUnmount() {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);
     }
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  setWrapperRef(node) {
+    this.wrapperRef = node;
   }
 
   handleOpenArticle(article) {
@@ -69,6 +77,15 @@ class Template extends React.Component {
         article: '',
       });
     }, 350);
+
+  }
+
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      if (this.state.isArticleVisible) {
+        this.handleCloseArticle();
+      }
+    }
   }
 
   render() {

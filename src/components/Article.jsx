@@ -23,6 +23,7 @@ Article.propTypes = {
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
   articleName: PropTypes.string,
+  setWrapperRef: PropTypes.func.isRequired,
 };
 
 export default Article;
