@@ -106,6 +106,7 @@ class Template extends React.Component {
               ...this.state,
               openArticle: this.handleOpenArticle,
               closeArticle: this.handleCloseArticle,
+              setWrapperRef: this.setWrapperRef,
             })
           }
           <Footer timeout={this.state.timeout} />
