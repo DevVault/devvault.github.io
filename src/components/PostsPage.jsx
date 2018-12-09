@@ -1,14 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import PostBox from './PostBox';
 
 import Article from './Article';
+import Layout from './layout';
+import Footer from './Footer';
+import StandardPage from './StandardPage';
 
-class PostsPage extends React.Component {
+class PostsPage extends StandardPage {
   componentDidMount() {
-    if (!this.props.isArticleVisible) {
-      this.props.openArticle('posts');
+    this.timeoutId = setTimeout(() => {
+      this.setState({ loading: '' });
+    }, 100);
+    document.addEventListener('mousedown', this.handleClickOutside);
+    if (!this.state.isArticleVisible) {
+      this.handleOpenArticle('posts');
     }
   }
 
@@ -16,28 +22,29 @@ class PostsPage extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
       .map(edge => <PostBox key={edge.node.id} post={edge.node} />);
 
-    console.log(this.props);
     return (
-      <Article
-        article={this.props.article}
-        articleTimeout={this.props.articleTimeout}
-        timeout={this.props.timeout}
-        articleName="Posts"
-      >
-        {posts}
-      </Article>
+      <Layout>
+        <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
+          <div id="wrapper">
+            <Article
+              article={this.state.article}
+              articleTimeout={this.state.articleTimeout}
+              timeout={this.state.timeout}
+              articleName="Posts"
+              onCloseArticle={this.handleCloseArticle}
+              setWrapperRef={this.setWrapperRef}
+            >
+              {posts}
+            </Article>
+            <Footer timeout={this.state.timeout} />
+          </div>
+          <div id="bg" />
+        </div>
+      </Layout>
     );
   }
 }
 
-PostsPage.propTypes = {
-  route: PropTypes.object,
-  article: PropTypes.string,
-  timeout: PropTypes.bool,
-  articleTimeout: PropTypes.bool,
-  isArticleVisible: PropTypes.bool,
-  openArticle: PropTypes.func,
-  closeArticle: PropTypes.func,
-};
+PostsPage.propTypes = {};
 
 export default PostsPage;

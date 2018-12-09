@@ -20,10 +20,14 @@ class ProjectBox extends React.Component {
         <div className="info">
           <div className="release">
             <div className="date">
-              <span>Release date:</span> {postDate}
+              <span>Release date:</span>
+              {' '}
+              {postDate}
             </div>
             <div className="version">
-              <span>Current version:</span> {postVersion}
+              <span>Current version:</span>
+              {' '}
+              {postVersion}
             </div>
           </div>
           <div className="about">

@@ -18,7 +18,15 @@ class PostBox extends React.Component {
           <img className="preview" alt="preview" src={imageSrc} />
         </div>
         <div className="info">
-          <h3 className="title"><Link to={postPath}>{postTitle} ({postDate})</Link></h3>
+          <h3 className="title">
+            <Link to={postPath}>
+              {postTitle}
+              {' '}
+(
+              {postDate}
+)
+            </Link>
+          </h3>
           <div className="description">
             <span dangerouslySetInnerHTML={{ __html: postDesc }} />
           </div>
