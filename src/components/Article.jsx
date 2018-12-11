@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 class Article extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div id="main" style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}>
         <article id={this.props.article} className={`active ${this.props.articleTimeout ? 'timeout' : ''}`} style={{ display: 'none' }}>
