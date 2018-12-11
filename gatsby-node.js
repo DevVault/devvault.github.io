@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const Promise = require('bluebird');
 const path = require('path');
+const webpack = require('webpack');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
@@ -32,4 +33,20 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       });
     }));
   });
+};
+
+exports.modifyWebpackConfig = function(config) {
+  config.merge({
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          CONTACT_API: JSON.stringify(process.env.CONTACT_API ? process.env.CONTACT_API : 'localhost'),
+          CONTACT_EMAIL: JSON.stringify(process.env.CONTACT_EMAIL ? process.env.CONTACT_EMAIL : 'admin@localhost.localdomain'),
+          SERVER_URL: JSON.stringify(process.env.SERVER_URL ? process.env.SERVER_URL : 'localhost'),
+          YANDEX_METRIKA_ID: JSON.stringify(process.env.YANDEX_METRIKA_ID ? process.env.YANDEX_METRIKA_ID : '00000000'),
+        }})
+    ],
+  });
+
+  return config
 };
