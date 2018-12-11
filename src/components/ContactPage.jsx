@@ -18,7 +18,7 @@ class ContactPage extends React.Component {
         timeout={this.props.timeout}
         articleName="Contact"
       >
-        <form name="contact" method="POST" netlify-honeypot="_gotcha" data-netlify-recaptcha="true" data-netlify="true">
+        <form name="contact" action="/" method="POST" netlify-honeypot="_gotcha" data-netlify-recaptcha="true" data-netlify="true">
           <div className="field half first">
             <input type="text" name="name" id="name" placeholder="Your name" required />
           </div>
