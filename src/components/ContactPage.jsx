@@ -11,11 +11,6 @@ class ContactPage extends React.Component {
   }
 
   render() {
-    const apiPath = 'https://formspree.io/';
-    const mailName = 'max';
-    const serverName = 'devvault.ru';
-    console.log(process.env);
-
     return (
       <Article
         article={this.props.article}
@@ -23,7 +18,7 @@ class ContactPage extends React.Component {
         timeout={this.props.timeout}
         articleName="Contact"
       >
-        <form method="post" action={`${apiPath}${mailName}@${serverName}`}>
+        <form method="post" action={`${process.env.CONTACT_API}/${process.env.CONTACT_EMAIL}`}>
           <div className="field half first">
             <input type="text" name="name" id="name" placeholder="Your name" required />
           </div>
@@ -34,7 +29,7 @@ class ContactPage extends React.Component {
             <textarea name="message" id="message" rows="4" placeholder="Leave me a message" required />
           </div>
           <input type="hidden" name="_language" value="ru" />
-          <input type="hidden" name="_next" value={`https://www.${serverName}/contact`} />
+          <input type="hidden" name="_next" value={`${process.env.SERVER_URL}/contact`} />
           <input type="text" name="_gotcha" style={{ display: 'none' }} />
           <ul className="actions">
             <li><input type="submit" value="Send Message" className="special" /></li>
