@@ -14,7 +14,7 @@ class ContactPage extends React.Component {
     const apiPath = 'https://formspree.io/';
     const mailName = 'max';
     const serverName = 'devvault.ru';
-    console.log(`${CONTACT_EMAIL}`);
+    console.log(`${process.env.CONTACT_EMAIL}`);
 
     return (
       <Article
