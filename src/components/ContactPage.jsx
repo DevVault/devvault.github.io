@@ -18,10 +18,6 @@ class ContactPage extends StandardPage {
   }
 
   render() {
-    const apiPath = 'https://formspree.io/';
-    const mailName = 'max';
-    const serverName = 'devvault.ru';
-
     return (
       <Layout>
         <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
@@ -34,7 +30,7 @@ class ContactPage extends StandardPage {
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
             >
-              <form method="post" action={`${apiPath}${mailName}@${serverName}`}>
+              <form method="post" action={`${process.env.GATSBY_CONTACT_API_URL}/${process.env.GATSBY_CONTACT_EMAIL}`}>
                 <div className="field half first">
                   <input type="text" name="name" id="name" placeholder="Your name" required />
                 </div>
@@ -45,7 +41,7 @@ class ContactPage extends StandardPage {
                   <textarea name="message" id="message" rows="4" placeholder="Leave me a message" required />
                 </div>
                 <input type="hidden" name="_language" value="ru" />
-                <input type="hidden" name="_next" value={`https://www.${serverName}/contact`} />
+                <input type="hidden" name="_next" value={`${process.env.GATSBY_SERVER_URL}/contact`} />
                 <input type="text" name="_gotcha" style={{ display: 'none' }} />
                 <ul className="actions">
                   <li><input type="submit" value="Send Message" className="special" /></li>

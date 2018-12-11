@@ -71,7 +71,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-yandex-metrika',
       options: {
-        trackingId: '47919590',
+        trackingId: process.env.YANDEX_METRIKA_ID,
         webvisor: true,
         trackHash: true,
       },
