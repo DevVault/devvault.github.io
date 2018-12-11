@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-yandex-metrika',
       options: {
-        trackingId: '47919590',
+        trackingId: process.env.YANDEX_METRIKA_ID,
         webvisor: true,
         trackHash: true,
       },
@@ -59,8 +59,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'GatsbyJS',
-        short_name: 'GatsbyJS',
+        name: 'DevVault',
+        short_name: 'DevVault',
         start_url: '/',
         background_color: '#f7f0eb',
         theme_color: '#a2466c',

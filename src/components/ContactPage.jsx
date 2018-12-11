@@ -11,6 +11,11 @@ class ContactPage extends React.Component {
   }
 
   render() {
+    const apiPath = 'https://formspree.io/';
+    const mailName = 'max';
+    const serverName = 'devvault.ru';
+    console.log(process.env);
+
     return (
       <Article
         article={this.props.article}
@@ -18,7 +23,7 @@ class ContactPage extends React.Component {
         timeout={this.props.timeout}
         articleName="Contact"
       >
-        <form name="contact" action="/" method="POST" netlify-honeypot="_gotcha" data-netlify-recaptcha="true" data-netlify="true">
+        <form method="post" action={`${apiPath}${mailName}@${serverName}`}>
           <div className="field half first">
             <input type="text" name="name" id="name" placeholder="Your name" required />
           </div>
@@ -28,8 +33,9 @@ class ContactPage extends React.Component {
           <div className="field">
             <textarea name="message" id="message" rows="4" placeholder="Leave me a message" required />
           </div>
+          <input type="hidden" name="_language" value="ru" />
+          <input type="hidden" name="_next" value={`https://www.${serverName}/contact`} />
           <input type="text" name="_gotcha" style={{ display: 'none' }} />
-          <div data-netlify-recaptcha="true"></div>
           <ul className="actions">
             <li><input type="submit" value="Send Message" className="special" /></li>
             <li><input type="reset" value="Reset" /></li>
