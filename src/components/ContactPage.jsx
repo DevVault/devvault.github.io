@@ -23,7 +23,7 @@ class ContactPage extends React.Component {
         timeout={this.props.timeout}
         articleName="Contact"
       >
-        <form method="post" action={`${apiPath}${mailName}@${serverName}`} netlify>
+        <form method="post" action={`${apiPath}${mailName}@${serverName}`} name="contact" netlify>
           <div className="field half first">
             <input type="text" name="name" id="name" placeholder="Your name" required />
           </div>
