@@ -4,10 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const _ = require('lodash');
-const Promise = require('bluebird');
+const each = require('lodash/each');
 const path = require('path');
-const webpack = require('webpack');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
@@ -31,7 +29,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
 
       // Create blog posts pages.
-      _.each(result.data.allMarkdownRemark.edges, (edge) => {
+      const { allMarkdownRemark: { edges } } = result.data;
+      each(edges, (edge) => {
         createPage({
           path: edge.node.frontmatter.path,
           component: blogPost,

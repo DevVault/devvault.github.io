@@ -22,9 +22,9 @@ class PostBox extends React.Component {
             <Link to={postPath}>
               {postTitle}
               {' '}
-(
+              (
               {postDate}
-)
+              )
             </Link>
           </h3>
           <div className="description">

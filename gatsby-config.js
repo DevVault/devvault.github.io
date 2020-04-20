@@ -85,5 +85,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'DevVault',
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 };

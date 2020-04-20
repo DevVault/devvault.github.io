@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
 import Article from './Article';
@@ -12,6 +11,7 @@ class AboutPage extends StandardPage {
     this.timeoutId = setTimeout(() => {
       this.setState({ loading: '' });
     }, 100);
+    // eslint-disable-next-line no-undef
     document.addEventListener('mousedown', this.handleClickOutside);
     if (!this.state.isArticleVisible) {
       this.handleOpenArticle('about');
@@ -61,9 +61,9 @@ class AboutPage extends StandardPage {
                 </div>
                 <div className="right">
                   <p>
-Hi, my name Max! I live in Russia, Belgorod. I am programmer! Like sport, games but prefer to stay in home, or in small groups of people.
-                Little introverted, but have nice jokes.
-                Always has a plan on any situation.
+                    Hi, my name Max! I live in Russia, Belgorod. I am programmer! Like sport, games but prefer to stay in home, or in small groups of people.
+                    Little introverted, but have nice jokes.
+                    Always has a plan on any situation.
                   </p>
                 </div>
               </div>
@@ -104,7 +104,7 @@ Hi, my name Max! I live in Russia, Belgorod. I am programmer! Like sport, games 
                     <h4>Belgorod Technological State University</h4>
                     <h5>Programming of the computing devices and automated systems (230105)</h5>
                     <p>
-Successfully completed 5 year education with degree Engineer
+                      Successfully completed 5 year education with degree Engineer
                     </p>
                   </div>
                 </div>
@@ -121,9 +121,9 @@ Successfully completed 5 year education with degree Engineer
                     <h4>Motiware</h4>
                     <h5>PHP &amp; ExtJS Developer</h5>
                     <p>
-System of automated document flow. Programming on Javascript with ExtJS versions 1 - 6.
-                  And PHP with Memcached, Apache2, ActiveMQ, Solr and Firebird / PostgreSQL as DataSource.
-                  Have written many components for ExtJS: Timetracking chart, Gantt chart, custom grids and etc.
+                      System of automated document flow. Programming on Javascript with ExtJS versions 1 - 6.
+                      And PHP with Memcached, Apache2, ActiveMQ, Solr and Firebird / PostgreSQL as DataSource.
+                      Have written many components for ExtJS: Timetracking chart, Gantt chart, custom grids and etc.
                     </p>
                   </div>
                   <div className="section_work">
@@ -131,7 +131,7 @@ System of automated document flow. Programming on Javascript with ExtJS versions
                     <h4>R-Vision</h4>
                     <h5>NodeJS &amp; ExtJS Developer</h5>
                     <p>
-Programming in Javascript in NodeJS ES6 syntax and ExtJS 5-6 on frontend
+                      Programming in Javascript in NodeJS ES6 syntax and ExtJS 5-6 on frontend
                     </p>
                   </div>
                 </div>
@@ -147,10 +147,10 @@ Programming in Javascript in NodeJS ES6 syntax and ExtJS 5-6 on frontend
                     <p>
                       <span><strong>My technical skills description:</strong></span>
                       <br />
-                I have many expirence in transact SQL queries. All 5 years of institute programming on .NET Framework.
-                Works 3 years on PHP, but it is simple language. Have expirence also in C++, JAVA, Haskel, Pacal, Assembly.
-                Nowadays studing javascript and all actual frameworks such as React, Babel, Webpack. But
-                Hate pure HTML and CSS (SASS / SCSS too but in bit less :)
+                      I have many expirence in transact SQL queries. All 5 years of institute programming on .NET Framework.
+                      Works 3 years on PHP, but it is simple language. Have expirence also in C++, JAVA, Haskel, Pacal, Assembly.
+                      Nowadays studing javascript and all actual frameworks such as React, Babel, Webpack. But
+                      Hate pure HTML and CSS (SASS / SCSS too but in bit less :)
                     </p>
 
                   </div>

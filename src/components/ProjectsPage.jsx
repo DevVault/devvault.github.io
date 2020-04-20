@@ -20,7 +20,7 @@ class ProjectsPage extends StandardPage {
 
   render() {
     const projects = get(this, 'props.data.allMarkdownRemark.edges')
-      .map(edge => <ProjectBox key={edge.node.id} post={edge.node} />);
+      .map((edge) => <ProjectBox key={edge.node.id} post={edge.node} />);
 
     return (
       <Layout>

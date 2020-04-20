@@ -20,7 +20,7 @@ class PostsPage extends StandardPage {
 
   render() {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
-      .map(edge => <PostBox key={edge.node.id} post={edge.node} />);
+      .map((edge) => <PostBox key={edge.node.id} post={edge.node} />);
 
     return (
       <Layout>

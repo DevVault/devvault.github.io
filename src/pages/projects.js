@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import ProjectsPage from '../components/ProjectsPage';
 
 export default ProjectsPage;
