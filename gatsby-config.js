@@ -88,9 +88,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'DevVault',
+        spaceId: 'egqjfzy12wrh',
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        //accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: '1cEmfjdkvdRrDXA75japGBjp6Bg_Lqk3EMGvIMyxuBI',
       },
     },
   ],

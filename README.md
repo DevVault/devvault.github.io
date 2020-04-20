@@ -15,3 +15,5 @@ Main [DevVault](https://www.devvault.ru) site repository
 
 Checkout this repository and cd in project root directory
 Run `gatsby develop` in the terminal to start.
+
+Run `gatsby develop` in the terminal to start the dev site.

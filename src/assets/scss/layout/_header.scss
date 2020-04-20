@@ -10,26 +10,39 @@
   @include vendor('display', 'flex');
   @include vendor('flex-direction', 'column');
   @include vendor('align-items', 'center');
-  @include vendor('transition', (
-    'transform #{_duration(article)} ease-in-out',
-			'filter #{_duration(article)} ease-in-out',
-			'opacity #{_duration(article)} ease-in-out',
-		));
-
-  background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-  background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-  background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-  background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+  @include vendor(
+    'transition',
+    (
+      'transform #{_duration(article)} ease-in-out',
+      'filter #{_duration(article)} ease-in-out',
+      'opacity #{_duration(article)} ease-in-out'
+    )
+  );
+  background-image: -moz-radial-gradient(
+    rgba(0, 0, 0, 0.25) 25%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  background-image: -webkit-radial-gradient(
+    rgba(0, 0, 0, 0.25) 25%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  background-image: -ms-radial-gradient(
+    rgba(0, 0, 0, 0.25) 25%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.25) 25%,
+    rgba(0, 0, 0, 0) 55%
+  );
   max-width: 100%;
   text-align: center;
 
   > * {
     @include vendor('transition', 'opacity #{_duration(article)} ease-in-out');
-
     position: relative;
     margin-top: 3.5rem;
 
-    &::before {
+    &:before {
       content: '';
       display: block;
       position: absolute;
@@ -44,7 +57,7 @@
   > :first-child {
     margin-top: 0;
 
-    &::before {
+    &:before {
       display: none;
     }
   }
@@ -57,7 +70,7 @@
     border-radius: 100%;
 
     .icon {
-      &::before {
+      &:before {
         font-size: 2rem;
       }
     }
@@ -71,13 +84,15 @@
     max-width: 100%;
 
     .inner {
-      @include vendor('transition', (
-        'max-height #{_duration(intro)} ease',
-					'padding #{_duration(intro)} ease',
-					'opacity #{_duration(article)} ease-in-out'
-				));
+      @include vendor(
+        'transition',
+        (
+          'max-height #{_duration(intro)} ease',
+          'padding #{_duration(intro)} ease',
+          'opacity #{_duration(article)} ease-in-out'
+        )
+      );
       @include vendor('transition-delay', '0.25s');
-
       padding: 3rem 2rem;
       max-height: 40rem;
       overflow: hidden;
@@ -85,11 +100,6 @@
       > :last-child {
         margin-bottom: 0;
       }
-    }
-
-    h1 {
-      font-style: italic;
-      font-size: 5.0rem;
     }
 
     p {
@@ -103,7 +113,6 @@
   nav {
     ul {
       @include vendor('display', 'flex');
-
       margin-bottom: 0;
       list-style: none;
       padding-left: 0;
@@ -118,7 +127,7 @@
           border-left: 0;
         }
 
-        a {
+        button {
           display: block;
           min-width: 7.5rem;
           height: 2.75rem;
@@ -127,9 +136,12 @@
           text-transform: uppercase;
           letter-spacing: _font(letter-spacing);
           font-size: 0.8rem;
-          border-bottom: 0;
+          font-family: _font(family);
+          border: none;
+          box-shadow: none;
 
-          &:hover {
+          &:hover,
+          &:focus {
             background-color: _palette(border-bg);
           }
 
@@ -141,7 +153,7 @@
     }
 
     &.use-middle {
-      &::after {
+      &:after {
         content: '';
         display: block;
         position: absolute;
@@ -164,8 +176,7 @@
 
   .body.is-article-visible & {
     @include vendor('transform', 'scale(0.95)');
-    @include vendor('filter', 'blur(0.1rem)');
-
+    // @include vendor('filter', 'blur(0.1rem)');
     opacity: 0;
   }
 
@@ -174,7 +185,7 @@
       opacity: 0;
     }
 
-    @include vendor('filter', 'blur(0.125rem)');
+    // @include vendor('filter', 'blur(0.125rem)');
 
     .content {
       .inner {
@@ -200,7 +211,7 @@
     > * {
       margin-top: 2rem;
 
-      &::before {
+      &:before {
         top: calc(-2rem - 1px);
         height: calc(2rem + 1px);
       }
@@ -212,7 +223,7 @@
       line-height: 4.75rem;
 
       .icon {
-        &::before {
+        &:before {
           font-size: 1.75rem;
         }
       }
@@ -241,7 +252,6 @@
     nav {
       ul {
         @include vendor('flex-direction', 'column');
-
         min-width: 10rem;
         max-width: 100%;
 
@@ -263,7 +273,7 @@
       }
 
       &.use-middle {
-        &::after {
+        &:after {
           display: none;
         }
       }
