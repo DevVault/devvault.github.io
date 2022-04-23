@@ -53,13 +53,13 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
-    "eslint": "^5.10.0",
+    "eslint": "^7.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "gatsby-plugin-styled-jsx": "^3.0.3",
-    "stylelint": "^9.1.1",
+    "stylelint": "^14.0.0",
     "stylelint-config-standard": "^18.2.0",
     "prettier": "^1.14.2"
   }
