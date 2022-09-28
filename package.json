@@ -6,7 +6,7 @@
   "dependencies": {
     "core-js": "^2.6.0",
     "disqus-react": "^1.0.4",
-    "gatsby": "^2.0.0",
+    "gatsby": "^4.0.0",
     "gatsby-image": "^2.0.22",
     "gatsby-link": "^2.0.7",
     "gatsby-plugin-canonical-urls": "^2.0.8",
@@ -15,7 +15,7 @@
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
-    "gatsby-plugin-sharp": "^2.0.15",
+    "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-plugin-sitemap": "^2.0.3",
     "gatsby-plugin-yandex-metrika": "^1.0.5",
     "gatsby-remark-copy-linked-files": "^2.0.7",
